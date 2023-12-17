@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Responsible for installing all dependencies necessary for running the project.
+pip install -r requirements.txt
