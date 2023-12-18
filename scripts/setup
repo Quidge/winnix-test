@@ -1,2 +1,17 @@
 #!/usr/bin/env bash
 
+IN_VENV=$(python -c 'import sys; sys.exit(0 if sys.prefix == sys.base_prefix else 1)'; echo $?)
+
+# Check the exit code of the Python script
+if [ "$IN_VENV" -eq 0 ]; then
+    echo "This script is NOT running in a virtual environment. Ensure you're running in a virtual environment before continuing."
+    exit 1
+fi;
+
+# Ensure that the python version used is the same version mentioned in the .PYTHON_VERSION file.
+# if [python ]
+
+
+pip install -r requirements.txt
+
+
